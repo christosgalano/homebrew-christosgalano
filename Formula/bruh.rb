@@ -11,7 +11,7 @@ class Bruh < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_darwin_amd64.tar.gz"
-      sha256 "90b2a7f09f30c423eab006d51a9ab1956a13354d98f86f1bd30ac513cca03e1f"
+      sha256 "885214f6ed152270ae9dfa8626a246f7a55d0c242f7818b0e27759bde9491570"
 
       def install
         bin.install "bruh"
@@ -19,7 +19,7 @@ class Bruh < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_darwin_arm64.tar.gz"
-      sha256 "227d3d00fcae954cd888a733aa48ff47ea36a97558a70065d7f06bfa576b87fe"
+      sha256 "02f1e4bc7300f114e1cad9648ec10968faba4bb3ecf306441631723febba9554"
 
       def install
         bin.install "bruh"
@@ -28,9 +28,9 @@ class Bruh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_linux_amd64.tar.gz"
-      sha256 "67caef01b4a7e259686fb2134cf26db8fe63fe39e9879dacd00b61c7ae281429"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_linux_arm64.tar.gz"
+      sha256 "30551ea9cc168525a38be0b0656222a1fa43e854f81212966f9917ab954e5a45"
 
       def install
         bin.install "bruh"
@@ -38,15 +38,15 @@ class Bruh < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_linux_arm.tar.gz"
-      sha256 "517b3f7757e0fb310fb033fb057fc31ad5c7f23eada85a9b6a57bce773a433de"
+      sha256 "b0b522114a48edeacda4f5a82f43dbb44dbefe452af23cd5deeba751498fcd73"
 
       def install
         bin.install "bruh"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_linux_arm64.tar.gz"
-      sha256 "1ba41fa143e4e352416c00c30fad9dbc4ceef1f790d336ea38c432f7e2c6bd41"
+    if Hardware::CPU.intel?
+      url "https://github.com/christosgalano/bruh/releases/download/v1.0.0/bruh_linux_amd64.tar.gz"
+      sha256 "5bacfdf75ece247be4eb2867b7ea36e917048684c0c3184d587f03414c969a82"
 
       def install
         bin.install "bruh"

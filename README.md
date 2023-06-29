@@ -1,6 +1,6 @@
 # Homebrew tap
 
-This is the (Homebrew)[homebrew] [tap](https://docs.brew.sh/Taps.html) for
+This is the (Homebrew)[tap](https://docs.brew.sh/Taps.html) for
 (bruh)[bruh].
 
 [homebrew]: https://brew.sh/

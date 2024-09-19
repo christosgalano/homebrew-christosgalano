@@ -5,21 +5,21 @@
 class BicepDocs < Formula
   desc "Command-line tool to generate documentation for Bicep templates"
   homepage "https://github.com/christosgalano/bicep-docs"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.1.0/bicep-docs_darwin_amd64.tar.gz"
-      sha256 "65495fe384d09b68981684c86158ca79ba3ca53d6991b4d0bbc4332d90f5c232"
+    on_intel do
+      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.2.0/bicep-docs_darwin_amd64.tar.gz"
+      sha256 "a876474bd0ce4247e9fb670f87cca398e1a7c77f73cf1438e179546fb082260b"
 
       def install
         bin.install "bicep-docs"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.1.0/bicep-docs_darwin_arm64.tar.gz"
-      sha256 "bb404f1bd844bcbf74da3dc5865c41fed9eb8d12807c6ca64a126bb5936174d6"
+    on_arm do
+      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.2.0/bicep-docs_darwin_arm64.tar.gz"
+      sha256 "ad34e2f683b35b3c3583ccc91f55a9fd1edca2c98ddbdf4587bd9223001dbdb0"
 
       def install
         bin.install "bicep-docs"
@@ -28,28 +28,34 @@ class BicepDocs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.1.0/bicep-docs_linux_amd64.tar.gz"
-      sha256 "9e7c78689593c505ac933ff2736195e29105bf20105ff84dbadbaae813783b97"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/christosgalano/bicep-docs/releases/download/v1.2.0/bicep-docs_linux_amd64.tar.gz"
+        sha256 "db3936fc42a1b1cdd2b56407245cb57651fa77328a2a05a84468ba023ad4144b"
 
-      def install
-        bin.install "bicep-docs"
+        def install
+          bin.install "bicep-docs"
+        end
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.1.0/bicep-docs_linux_arm.tar.gz"
-      sha256 "9b764a6afa9fd2a1a7cfd0a63b7a9565f2240e24edd97c7f10cf82746e1839d4"
+    on_arm do
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/christosgalano/bicep-docs/releases/download/v1.2.0/bicep-docs_linux_arm.tar.gz"
+        sha256 "7bf366cde08328184f5e4ce7fca9442cd82b10e27b2d58dd9ca6bab6234df3ae"
 
-      def install
-        bin.install "bicep-docs"
+        def install
+          bin.install "bicep-docs"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/christosgalano/bicep-docs/releases/download/v1.1.0/bicep-docs_linux_arm64.tar.gz"
-      sha256 "fa529d18645eee2cd4b0b5864174f612dc84f93baa48eebf7d6e3ca1afe1a3bc"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/christosgalano/bicep-docs/releases/download/v1.2.0/bicep-docs_linux_arm64.tar.gz"
+        sha256 "a330043e1c152700a191471204634ff625e055d746be124fd2737683e675d98e"
 
-      def install
-        bin.install "bicep-docs"
+        def install
+          bin.install "bicep-docs"
+        end
       end
     end
   end

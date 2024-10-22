@@ -11,7 +11,7 @@ class DeleteGhWorkflowRuns < Formula
   on_macos do
     on_intel do
       url "https://github.com/christosgalano/delete-gh-workflow-runs/releases/download/v1.0.0/delete-gh-workflow-runs_darwin_amd64.tar.gz"
-      sha256 "c0431fd5b1d7bb9721771341a2463876b49f6beb64383d3f195a26fe0e1a7041"
+      sha256 "38b6918ba526453fb2f97c9d500c735519c583c95c474bd4239c1634cf1562e7"
 
       def install
         bin.install "delete-gh-workflow-runs"
@@ -19,7 +19,7 @@ class DeleteGhWorkflowRuns < Formula
     end
     on_arm do
       url "https://github.com/christosgalano/delete-gh-workflow-runs/releases/download/v1.0.0/delete-gh-workflow-runs_darwin_arm64.tar.gz"
-      sha256 "a23839355e9fcb852acfbaf069db25f46e27ebde6fb604f2175346518abe1be8"
+      sha256 "6c1db15cb89d0290e6552999c51c6c236a8bd67997d12394baf2115cbcd959d4"
 
       def install
         bin.install "delete-gh-workflow-runs"
@@ -31,7 +31,7 @@ class DeleteGhWorkflowRuns < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/delete-gh-workflow-runs/releases/download/v1.0.0/delete-gh-workflow-runs_linux_amd64.tar.gz"
-        sha256 "270b308433b299ae59decc84d1b97631295f5aa0f9fa02ced91dfaa4f9abcb71"
+        sha256 "3622570ce1a09c18ec8cd4b30944eef38dd4f3e19041da4a38564c1db7174447"
 
         def install
           bin.install "delete-gh-workflow-runs"
@@ -41,7 +41,7 @@ class DeleteGhWorkflowRuns < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/delete-gh-workflow-runs/releases/download/v1.0.0/delete-gh-workflow-runs_linux_arm.tar.gz"
-        sha256 "d688c8d4c9223079761ffc16f32f9ace3af79c17de81ba434bc76afb3a6bcf08"
+        sha256 "7e89357c31a217f0e0e60eb279549d2c137e4784c20496dac014fce05fe40e96"
 
         def install
           bin.install "delete-gh-workflow-runs"
@@ -51,7 +51,7 @@ class DeleteGhWorkflowRuns < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/delete-gh-workflow-runs/releases/download/v1.0.0/delete-gh-workflow-runs_linux_arm64.tar.gz"
-        sha256 "8f92509c8b80150cbf36e6952b916be2cad381cb7d6d170b0cf9a314917426db"
+        sha256 "3287c0b27c4a3f90e8f8ea6b7283f2c4602425f73fcbc4f7519c454d67b83721"
 
         def install
           bin.install "delete-gh-workflow-runs"

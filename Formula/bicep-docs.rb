@@ -11,7 +11,7 @@ class BicepDocs < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/christosgalano/bicep-docs/releases/download/v1.3.2/bicep-docs_darwin_amd64.tar.gz"
-      sha256 "95fdc2f3fd6bad98d07394b6d9406ebc14742c86887dd463274443e76fe31cd9"
+      sha256 "957b4b7a837afb63999ab1ed79cb7e514e7bb8e84181dfa595aaf7b783e464dc"
 
       def install
         bin.install "bicep-docs"
@@ -19,7 +19,7 @@ class BicepDocs < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/christosgalano/bicep-docs/releases/download/v1.3.2/bicep-docs_darwin_arm64.tar.gz"
-      sha256 "b41c4085018a863117c92d69a8069f2b76860719bb2628453e21c25b37a39f65"
+      sha256 "96bfc216e2d34522159c19b03e944ebc988204ac2e7a1660d59b603b4e35e0fb"
 
       def install
         bin.install "bicep-docs"
@@ -31,7 +31,7 @@ class BicepDocs < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/bicep-docs/releases/download/v1.3.2/bicep-docs_linux_amd64.tar.gz"
-        sha256 "49a9960d9506a1c546715cab5d9d70a2688a18ebba13f993313f6e9c97e95576"
+        sha256 "441235eeaca6883dd5f306a586f8e747adf2e61e45cbb0dff949e0d33f9613b3"
 
         def install
           bin.install "bicep-docs"
@@ -41,7 +41,7 @@ class BicepDocs < Formula
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/bicep-docs/releases/download/v1.3.2/bicep-docs_linux_arm.tar.gz"
-        sha256 "8d93f33d0ba530b6a067ae6f7ce1a52eda0d8fbeee3fe040a475e7772362cdf5"
+        sha256 "bf0aaa8fd207159b1b0386b62f7de4e6507f617389c6711733093e13e0dc8dc9"
 
         def install
           bin.install "bicep-docs"
@@ -51,7 +51,7 @@ class BicepDocs < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/christosgalano/bicep-docs/releases/download/v1.3.2/bicep-docs_linux_arm64.tar.gz"
-        sha256 "40626e039f2abb2b33496157556c461af69783f2e90f0971808cfdb8f7208326"
+        sha256 "394013ea3555927dfc598cd1117898d99d1b78e4dd6aed906894d55c87dae21b"
 
         def install
           bin.install "bicep-docs"
